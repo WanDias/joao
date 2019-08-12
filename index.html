@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="/css/main.css">
+
+  <title>João Florentino</title>
+</head>
+<body>
+  
+  <header>
+    <div class="logo">
+      <a href="#">João Florentino</a>
+    </div>
+    
+    <nav>
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Serviços</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="wrapper">
+    
+    <section class="hero">
+      <div class="inner">
+        <div class="clippper">
+          <h1>João Florentino</h1>
+        </div>
+        <div class="anim-panel">
+          <blockquote>
+            <p>
+              "O incapaz se cobre. O rico se enfeita. <br>O presunçoso se disfarça. O elegante se veste."<br>
+              <small><i>Honoré de Balzac</i></small>
+            </p>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="inner">
+        <div class="clipper">
+          <h2>Sobre Mim</h2>
+        </div>
+        <div class="anim-panel">
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod blanditiis eius facilis autem natus odit ad repellendus architecto ea eligendi.</p>
+          <a href="#" class="read-btn">Leia mais</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="subscribe">
+      <div class="inner">
+        <div class="clipper">
+          <h2>Inscreva-se</h2>
+        </div>
+        <div class="anim-panel">
+          <p>Inscreva seu e-mail para receber novidades sobre produtos, eventos e novas postagens no blog.</p>
+          <input type="text" name="email" placeholder="Seu email">
+          <button class="cta">Inscrever</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
+  <script>
+    
+    document.addEventListener("DOMContentLoaded", function(event) {
+
+      window.addEventListener("load", function(e) {
+
+        document.body.style.display = "block";
+
+        var tl = new TimelineMax();
+
+        tl.staggerFrom('section', 2,{
+          opacity: 0,
+          scale: .5,
+          ease: Power2.easeOut
+        }, 0.2)
+
+        tl.staggerFrom('h1, h2', .5, {
+          opacity: 0,
+          y: -40,
+          ease: Power2.easeInOut
+        }, 0.2, "-=2")
+
+        tl.staggerFrom('.anim-panel', 1, {
+          opacity: 0,
+          y: -40,
+          ease: Power2.easeInOut
+        }, 0.5, "-=2")
+      }, false);
+
+    });
+    
+  </script>
+
+</body>
+</html>
